@@ -6,11 +6,12 @@ using UnityEngine.UI;
 public class MenuUIManager : MonoBehaviour
 {
     public InputField Name;
+    public Text text;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        text.text = PersistentData.Instance.playerHighScore;
     }
 
     // Update is called once per frame

@@ -83,8 +83,10 @@ public class MainManager : MonoBehaviour
         {
             PersistentData.Instance.highScore = m_Points;
             PersistentData.Instance.playerName = playerName01.text;
+            PersistentData.Instance.playerHighScore = $"{PersistentData.Instance.playerName}: {PersistentData.Instance.highScore}";
         }
 
         PersistentData.Instance.Save();
+        SceneManager.LoadScene(0);
     }
 }
